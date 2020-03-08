@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('home.index');
 });
+Route::get('/catalog', function () {
+    return view('catalog.index');
+});
