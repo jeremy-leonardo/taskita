@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-md-12 text-right">
                         <div class="row">
-                            <div class="col-md-6 menu-text"></div>
+                            <div class="col-md-6"></div>
                             <div class="col-md-2 menu-text"><a class="deco-none" href="/">HOME</a></div>
                             <div class="col-md-2 menu-text"><a class="deco-none" href="/catalog">CATALOG</a></div>
                             <div class="col-md-2 menu-text"><a class="deco-none" href="#">LOGIN</a></div>
