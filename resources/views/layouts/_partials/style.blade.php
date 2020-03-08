@@ -5,7 +5,7 @@
 <title>TasKita</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="{{asset('/bootstrap-4.4.1-dist/css/bootstrap.min.css')}}" />
-<link rel="stylesheet" href="{{asset('/bootstrap-4.4.1-dist/css/bootstrap-grid-min.css')}}" />
+<link rel="stylesheet" href="{{asset('/bootstrap-4.4.1-dist/css/bootstrap-grid.min.css')}}" />
 <link rel="stylesheet" href="{{asset('/bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css')}}" />
 
 <!-- Datepicker css -->

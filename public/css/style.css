@@ -27,6 +27,7 @@ body {
   height: 70px;
   background: #c02931;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 10;
 }
 
 .logo-header {
