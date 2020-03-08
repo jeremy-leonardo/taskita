@@ -94,14 +94,27 @@ a.deco-none {
   width: 50%; */
   margin-top: 90px;
   margin-left: -210px;  
+  width: 30vw;
 }
 
 .luggage {
+  width: 30vw;
   /* position: absolute;
   left: 30px;
   top: 10px;
   z-index: 0;
   width: 50%; */
+}
+
+@media screen and (max-width: 992px) {
+  .luggage {
+    margin: 0;
+    width: 40vw;
+  }
+  .backpack {
+    margin-left: -20vw;
+    width: 40vw;
+  }
 }
 
 /* CATALOG */
