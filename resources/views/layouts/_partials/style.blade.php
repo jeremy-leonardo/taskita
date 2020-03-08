@@ -12,4 +12,4 @@
 {{-- <link rel="stylesheet" href="{{asset('/css/bootstrap-datepicker.css')}}" /> --}}
 
 <!-- Main css -->
-<link rel="stylesheet" href="{{asset('/css/style.css')}}" />
+<link rel="stylesheet" href="{{asset('/css/style.css')}}?key=<?php echo date('d-M-y'); ?>" />
