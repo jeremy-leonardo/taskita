@@ -43,25 +43,27 @@
 
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="item-box">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <div class="img-box mt-3 mb-3">
-                                <img class="item-img" src="{{asset('/image/home/red-luggage.png')}}" alt="">
+                <a href="/catalog/detail/1">
+                    <div class="item-box">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="img-box mt-3 mb-3">
+                                    <img class="item-img" src="{{asset('/image/home/red-luggage.png')}}" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 mt-3 mb-3">
-                            <div class="item-name mb-2">Polo X13 Red</div>
-                            <div class="item-price">
-                                Rp 12,000 / hari
-                            </div>
-                            <div class="or">atau</div>
-                            <div class="item-price">
-                                Rp 42,000 / minggu
+                            <div class="col-12 mt-3 mb-3">
+                                <div class="item-name mb-2">Polo X13 Red</div>
+                                <div class="item-price">
+                                    Rp 12,000 / hari
+                                </div>
+                                <div class="or">atau</div>
+                                <div class="item-price">
+                                    Rp 42,000 / minggu
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-3">
                 <div class="item-box">
