@@ -10,7 +10,7 @@
 
 
 <div class="row">
-    <div class="col-12 pb-3">
+    <div class="col-12 pb-5">
 
         <div class="row">
             <div class="col-12">
@@ -43,7 +43,7 @@
 
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <a href="/catalog/detail/1">
+                <a class="deco-none" href="/catalog/detail/1">
                     <div class="item-box">
                         <div class="row">
                             <div class="col-12 text-center">

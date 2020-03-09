@@ -56,8 +56,11 @@ body {
   margin-top: 25px;
 }
 
-a.deco-none {
+.fcolor-white {
   color: #ffffff !important;
+}
+
+a.deco-none {
   text-decoration: none;
 }
 
