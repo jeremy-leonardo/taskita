@@ -37,8 +37,39 @@
                 <a class="nav-link deco-none fcolor-white mr-3" href="/catalog">CATALOG</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link deco-none fcolor-white mr-3" href="#">LOGIN</a>
+                <a class="nav-link deco-none fcolor-white mr-3" href="#" data-toggle="modal" data-target="#loginModal">LOGIN</a>
             </li>
         </ul>
     </div>
 </nav>
+
+{{-- LOGIN MODAL --}}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2 class="loghead"><b>Login</b></h2>
+                <label for="Username">Username</label>
+                <input type="text" class="form-control">
+                <br>
+                <label for="Username">Password</label>
+                <input type="Password" class="form-control">
+                <br><br><br><br>
+            
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary btnlog">Login</button>
+                        <br><br><br>
+                        <p class="akunn">Belum Memiliki Akun ?</p>
+                        <a class="daftar" id="linkreg" data-dismiss="modal" data-target="#exampleModal1">Miliki di sini untuk mendaftar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

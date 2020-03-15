@@ -196,3 +196,31 @@ footer {
   font-size: 12px;
   line-height: 14px;
 }
+
+/* bagian login */
+.loghead{
+text-align: center;
+}
+
+.close{
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.form-control{
+  width: 100%;
+}
+
+.btnlog{
+  width: 30%;
+}
+
+.akunn{
+  font-size: 12px;
+}
+
+.daftar{
+font-size: 12px;
+color:#1bb9f2 !important;
+}
