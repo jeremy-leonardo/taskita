@@ -1,3 +1,6 @@
+/* GLOBAL CSS */
+/* utk style masing - masing view, tolong gunakan section style pada view tersebut, kecuali header dan footer */
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
 body {
@@ -30,10 +33,10 @@ body {
     margin-left: 0px;
 } */
 
+
 /* HEADER - PRIMARY NAVIGATION */
 
 .primary-navigation {
-  /* height: 70px; */
   background: #c02931;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   z-index: 10;
@@ -64,127 +67,37 @@ a.deco-none {
   text-decoration: none;
 }
 
-/* HOME */
 
-.pink-bg {
-  background: #ffa3a3;
-}
+/* HEADER - LOGIN */
 
-.main-text {
-  margin-top: 20vh;
-  margin-left: 5%;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 56px;
-}
-
-.second-text-group {
-  margin-left: 5%;
-}
-
-.second-text {
-  font-style: normal;
-  font-size: 28px;
-  line-height: 33px;
-}
-
-.luggage {
-  z-index: 1;
-}
-
-.backpack {
-  /* position: absolute;
-  left: 170px;
-  top: 90px;
-  z-index: 0;
-  width: 50%; */
-  margin-top: 90px;
-  margin-left: -210px;  
-  width: 30vw;
-}
-
-.luggage {
-  width: 30vw;
-  /* position: absolute;
-  left: 30px;
-  top: 10px;
-  z-index: 0;
-  width: 50%; */
-}
-
-@media screen and (max-width: 990px) {
-  .luggage {
-    margin: 0;
-    width: 40vw;
+.loghead{
+  text-align: center;
   }
-  .backpack {
-    margin-left: -20vw;
-    width: 40vw;
+  
+  .close{
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
   }
-}
+  
+  .form-control{
+    width: 100%;
+  }
+  
+  .btnlog{
+    width: 30%;
+  }
+  
+  .akunn{
+    font-size: 12px;
+  }
+  
+  .daftar{
+  font-size: 12px;
+  color:#1bb9f2 !important;
+  }
 
-/* CATALOG */
 
-.search-nav {
-  /* width: 90%; */
-  margin: 50px auto 50px auto;
-  /* height: 50px; */
-
-  background: #ffffff;
-  border: 1px solid #d6d6d6;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-}
-
-.search-btn {
-  width: 100%;
-}
-
-.item-box {
-  /* width: 202px; */
-  /* height: 353px; */
-  background: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}
-
-.item-img {
-  width: 80%;
-}
-
-.img-box {
-  background: linear-gradient(180deg, #ffdada 0%, rgba(255, 255, 255, 0) 100%), #ffffff;
-  border: 1px solid #d6d6d6;
-  box-sizing: border-box;
-  border-radius: 10px;
-}
-
-.item-name {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  color: #000000;
-}
-
-.item-price {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #8c2020;
-}
-
-.or {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #6a6a6a;
-}
 
 /* FOOTER */
 
@@ -195,32 +108,4 @@ footer {
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-}
-
-/* bagian login */
-.loghead{
-text-align: center;
-}
-
-.close{
-  text-align: right;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-
-.form-control{
-  width: 100%;
-}
-
-.btnlog{
-  width: 30%;
-}
-
-.akunn{
-  font-size: 12px;
-}
-
-.daftar{
-font-size: 12px;
-color:#1bb9f2 !important;
 }
