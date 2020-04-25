@@ -48,8 +48,8 @@ class LoginController extends Controller
     }
 
     public function logout(Request $request) {
-        if (Auth::guard('user')->check()) {
-            Auth::guard('user')->logout();
+        if (Auth::guard('web')->check()) {
+            Auth::guard('web')->logout();
         }
         return redirect()->route('homePage');
     }
@@ -60,7 +60,7 @@ class LoginController extends Controller
         //     'email'   => 'required|email',
         //     'password' => 'required|min:6'
         // ]);
-        if (Auth::guard('user')->attempt(['user_email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+        if (Auth::guard('web')->attempt(['user_email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
             return redirect()->intended('/');
         }
         return back()->withInput($request->only('user_email', 'remember'))->withErrors(['Failed to log in']);
