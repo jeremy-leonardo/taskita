@@ -10,8 +10,7 @@
     <link rel="manifest" href="{{asset('site.webmanifest')}}">
 
     @include('layouts._partials.style')
-    @yield('style')
-
+    
 </head>
 
 <body>

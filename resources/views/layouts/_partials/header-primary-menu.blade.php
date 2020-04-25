@@ -1,26 +1,6 @@
-{{-- <div class="row">
-    <div class="col-md-12 primary-navigation">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="/">
-                    <img src="{{asset('image/logo-primary.svg')}}" alt="" class="logo-header">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-12 text-right">
-                        <div class="row">
-                            <div class="col-md-6"></div>
-                            <div class="col-md-2 menu-text"><a class="deco-none" href="/">HOME</a></div>
-                            <div class="col-md-2 menu-text"><a class="deco-none" href="/catalog">CATALOG</a></div>
-                            <div class="col-md-2 menu-text"><a class="deco-none" href="#">LOGIN</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
+@prepend('styles')
+    <link rel="stylesheet" href="{{asset('css/layouts/_partials/header-primary-menu.css')}}?key=<?php echo date('d-M-y'); ?>" />
+@endprepend
 
 <nav class="navbar navbar-expand-lg navbar-light primary-navigation">
     <a class="navbar-brand mr-5" href="/"><img src="{{asset('image/logo-primary.svg')}}" alt="" class="logo-header"></a>
@@ -43,33 +23,4 @@
     </div>
 </nav>
 
-{{-- LOGIN MODAL --}}
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h2 class="loghead"><b>Login</b></h2>
-                <label for="Username">Username</label>
-                <input type="text" class="form-control">
-                <br>
-                <label for="Username">Password</label>
-                <input type="Password" class="form-control">
-                <br><br><br><br>
-            
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <button class="btn btn-primary btnlog">Login</button>
-                        <br><br><br>
-                        <p class="akunn">Belum Memiliki Akun ?</p>
-                        <a class="daftar" id="linkreg" data-dismiss="modal" data-target="#exampleModal1">Miliki di sini untuk mendaftar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('layouts._partials.login-modal')
