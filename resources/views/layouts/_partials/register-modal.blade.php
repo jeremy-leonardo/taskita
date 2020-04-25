@@ -14,13 +14,13 @@
             <div class="modal-body">
                 <h2 class="modal-title"><b>Register</b></h2>
                 <label class="input-label" for="Email">Email</label>
-                <input type="email" id="email" placeholder="Email" class="form-control">
+                <input name="email" type="email" id="email" placeholder="Email" class="form-control">
                 <br>
                 <label class="input-label" for="Password">Password</label>
-                <input type="password" id="password" placeholder="Password" class="form-control">
+                <input name="password" type="password" id="password" placeholder="Password" class="form-control">
                 <br>
-                <label class="input-label" for="Password">Repeat Password</label>
-                <input type="password" id="repeatPassword" placeholder="Password" class="form-control">
+                <label class="input-label" for="Password">Confirm Password</label>
+                <input name="confirm-password" type="password" id="confirmPassword" placeholder="Password" class="form-control">
                 <div class="row">
                     <div class="col-12 text-center">
                         <button class="btn btn-primary action-btn">Register</button>

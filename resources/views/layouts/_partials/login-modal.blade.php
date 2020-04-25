@@ -17,10 +17,10 @@
                 <form method="POST" action="/login">
                     {{ csrf_field() }}
                     <label class="input-label" for="Email">Email</label>
-                    <input type="email" id="email" placeholder="Email" class="form-control">
+                    <input name="email" type="email" id="email" placeholder="Email" class="form-control">
                     <br>
                     <label class="input-label" for="Password">Password</label>
-                    <input type="password" id="password" placeholder="Password" class="form-control">
+                    <input name="password" type="password" id="password" placeholder="Password" class="form-control">
                     <br>
                     @if($errors->any())
                     <div class="alert alert-danger alert-dismissible">
