@@ -13,16 +13,16 @@
             </div>
             <div class="modal-body">
                 <h2 class="modal-title"><b>Login</b></h2>
-                <label for="Username">Username</label>
-                <input type="text" class="form-control">
+                <label class="input-label" for="Email">Email</label>
+                <input type="email" id="email" placeholder="Email" class="form-control">
                 <br>
-                <label for="Username">Password</label>
-                <input type="Password" class="form-control">
+                <label class="input-label" for="Password">Password</label>
+                <input type="password" id="password" placeholder="Password" class="form-control">
                 <div class="row">
                     <div class="col-12 text-center">
                         <button class="btn btn-primary action-btn">Login</button>
                         <p class="foot-text">Belum Memiliki Akun ?</p>
-                        <a class="foot-action-text" id="register-action-text" data-dismiss="modal" data-target="#exampleModal1">Klik di sini untuk mendaftar</a>
+                        <a class="foot-action-text cursor-pointer" id="register-action-text" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Klik di sini untuk mendaftar</a>
                     </div>
                 </div>
             </div>
