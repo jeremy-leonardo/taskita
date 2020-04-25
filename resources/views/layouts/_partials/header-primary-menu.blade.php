@@ -24,10 +24,16 @@
             </li>
         </ul>
     </div>
+    @if(Auth::guard('web')->check())
+    <span class="navbar-text d-none d-lg-block">
+        <a class="nav-link deco-none fcolor-white mr-3 nav-menu">Halo, {{Auth::guard('web')->user()->user_name}}</a>
+    </span>
+    @else
     <span class="navbar-text d-none d-lg-block">
         <a class="nav-link deco-none fcolor-white mr-3 nav-menu" href="#" data-toggle="modal"
             data-target="#loginModal">LOGIN</a>
     </span>
+    @endif
 </nav>
 
 @include('layouts._partials.login-modal')
