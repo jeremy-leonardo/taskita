@@ -21,4 +21,4 @@ Route::get('/catalog/detail/1', function () {
     return view('catalog.detail');
 });
 
-Route::post('/register', 'Auth\RegisterController@create');
+Route::post('/login', 'Auth\LoginController@login');

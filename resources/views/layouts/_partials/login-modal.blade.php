@@ -14,7 +14,7 @@
             <div class="modal-body">
                 <h2 class="modal-title"><b>Login</b></h2>
                 <!-- LOGIN FORM -->
-                <form method="POST" action="/register">
+                <form method="POST" action="/login">
                     {{ csrf_field() }}
                     <label class="input-label" for="Email">Email</label>
                     <input type="email" id="email" placeholder="Email" class="form-control">
