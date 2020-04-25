@@ -16,19 +16,25 @@ class UserTableSeeder extends Seeder
             'user_name' => 'User01', 
             'user_email' => 'user@mail.com',
             'user_password' => bcrypt('password'),
-            'user_phone_number' => '0234273242',
+            'user_phone_number' => '08234273242',
+            'user_address' => 'Jl. Kenangnan Selatan A/17, Kemanggisan, Barat',
+            'user_nik' => '1050241708900001',
             ],
             [
             'user_name' => 'Jeremy Leonardo', 
             'user_email' => 'jeremy_leonardo@mail.com',
             'user_password' => bcrypt('password'),
-            'user_phone_number' => '0234243242',
+            'user_phone_number' => '0823426456',
+            'user_address' => 'Jl. Italia Timur S/17, Kemanggisan, Barat',
+            'user_nik' => '1050241708900002',
             ],
             [
             'user_name' => 'Jeremy', 
             'user_email' => 'jeremy@mail.com',
             'user_password' => bcrypt('password'),
-            'user_phone_number' => '02374243242',
+            'user_phone_number' => '08234443242',
+            'user_address' => 'Jl. Kentara Selatan Z/18, Kemanggisan, Barat',
+            'user_nik' => '1050241708900003',
             ],
         ]);
     }

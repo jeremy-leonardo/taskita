@@ -20,7 +20,7 @@ class CreateUserTable extends Migration
             $table->string('user_name');
             $table->string('user_phone_number')->unique();
             $table->string('user_address');
-            $table->string('user_nik');
+            $table->char('user_nik', 16)->unique();
             // $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
