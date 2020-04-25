@@ -22,12 +22,12 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        If (env('APP_ENV') !== 'local') {
-            $this->app['request']->server->set('HTTPS', true);
-        }
+    // public function boot()
+    // {
+    //     If (env('APP_ENV') !== 'local') {
+    //         $this->app['request']->server->set('HTTPS', true);
+    //     }
 
-        Schema::defaultStringLength(191);
-    }
+    //     Schema::defaultStringLength(191);
+    // }
 }
