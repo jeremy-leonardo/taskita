@@ -20,3 +20,5 @@ Route::get('/catalog', function () {
 Route::get('/catalog/detail/1', function () {
     return view('catalog.detail');
 });
+
+Route::post('/register', 'Auth\RegisterController@create');

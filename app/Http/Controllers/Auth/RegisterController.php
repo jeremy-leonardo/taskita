@@ -51,8 +51,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:user,user_email'],
+            'password' => ['required', 'string', 'min:6', 'max:64'],
+            'password-confirmation' => ['required', 'same:password'],
+            'phone-number' => ['required', 'numeric', 'max:999999999999999999', 'unique:user,user_phone_number'],
         ]);
     }
 
@@ -64,10 +66,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+        $this->userValidator($request->all())->validate();
+        $user = User::create([
+            'user_name' => $request['name'],
+            'user_email' => $request['email'],
+            'user_password' => bcrypt($request['password']),
+            'user_phone_number' => $request['phone-number'],
         ]);
+        return redirect()->intended('/login');
+    }
+
+    public function showHomeRegister()
+    {
+        return view('auth.home.index', ['mode' => 'register']);
+    }
+    
+    public function showHomeLogin()
+    {
+        return view('auth.home.index', ['mode' => 'login']);
     }
 }
