@@ -25,9 +25,16 @@
         </ul>
     </div>
     <span class="navbar-text d-none d-lg-block">
-        <a class="nav-link deco-none fcolor-white mr-3 nav-menu" href="#" data-toggle="modal" data-target="#loginModal">LOGIN</a>
+        <a class="nav-link deco-none fcolor-white mr-3 nav-menu" href="#" data-toggle="modal"
+            data-target="#loginModal">LOGIN</a>
     </span>
 </nav>
 
 @include('layouts._partials.login-modal')
 @include('layouts._partials.register-modal')
+
+@prepend('inline-scripts')
+<script>
+   
+</script>
+@endprepend

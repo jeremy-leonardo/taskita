@@ -22,7 +22,6 @@
 
     @include('layouts._partials.script')
     @yield('script')
-    @stack('scripts')
 
 </body>
 

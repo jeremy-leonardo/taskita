@@ -36,3 +36,7 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+/* .modal {
+  overflow-y:auto;
+} */
