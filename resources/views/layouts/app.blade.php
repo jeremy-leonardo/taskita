@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon-16x16.png')}}">
     <link rel="manifest" href="{{asset('site.webmanifest')}}">
 
+    <meta name="description" content="Taskita merupakan website penyewaan tas untuk keperluan travelling atau bahkan pesta. (Website hanyalah sebuah demo)">
     @include('layouts._partials.style')
     
 </head>
