@@ -45,7 +45,7 @@
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Halo, {{Auth::guard('web')->user()->user_name}}
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu nav-dropdown-custom" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/logout">Logout</a>
         </div>
     </li>
@@ -58,7 +58,7 @@
 </nav>
 
 @include('layouts._partials.login-modal')
-@include('layouts._partials.register-modal')
+{{-- @include('layouts._partials.register-modal') --}}
 
 @prepend('inline-scripts')
 <script>

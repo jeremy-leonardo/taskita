@@ -20,6 +20,11 @@ Route::get('/catalog', function () {
 Route::get('/catalog/detail/1', function () {
     return view('catalog.detail');
 });
+Route::get('/register', function () {
+    // tambahin if auth web -> return ke home
+    return view('auth.register');
+});
 
 Route::post('/login', 'Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout');
+Route::post('/register', 'Auth\RegisterController@create');

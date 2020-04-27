@@ -7,7 +7,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close close-custom" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -34,8 +34,10 @@
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-primary action-btn">Login</button>
                             <p class="foot-text">Belum Memiliki Akun ?</p>
-                            <a class="foot-action-text cursor-pointer" id="register-action-text" data-dismiss="modal"
-                                data-toggle="modal" data-target="#registerModal">Klik di sini untuk mendaftar</a>
+                            {{-- <a class="foot-action-text cursor-pointer" id="register-action-text" data-dismiss="modal"
+                                data-toggle="modal" data-target="#registerModal">Klik di sini untuk mendaftar</a> --}}
+                            <a class="foot-action-text cursor-pointer" id="register-action-text" href="/register">Klik
+                                di sini untuk mendaftar</a>
                         </div>
                     </div>
                 </form>
@@ -43,3 +45,13 @@
         </div>
     </div>
 </div>
+
+{{-- @if($errors->any())
+@push('inline-scripts')
+<script>
+$(document).ready(function() {
+    $('#loginModal').modal('toggle');
+});
+</script>
+@endpush
+@endif --}}

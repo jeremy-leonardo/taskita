@@ -19,6 +19,10 @@
   color: inherit;
 }
 
+.nav-dropdown-custom {
+  right: 20px;
+}
+
 .fcolor-white {
   color: #ffffff !important;
 }

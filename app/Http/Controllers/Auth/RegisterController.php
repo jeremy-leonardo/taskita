@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -55,6 +56,8 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:6', 'max:64'],
             'password-confirmation' => ['required', 'same:password'],
             'phone-number' => ['required', 'numeric', 'max:999999999999999999', 'unique:user,user_phone_number'],
+            'address' => ['required', 'string'],
+            'nik' => ['required', 'string', 'max:16', 'min:16'],
         ]);
     }
 
@@ -64,16 +67,18 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(Request $request)
     {
-        $this->userValidator($request->all())->validate();
+        $this->validator($request->all())->validate();
         $user = User::create([
             'user_name' => $request['name'],
             'user_email' => $request['email'],
             'user_password' => bcrypt($request['password']),
             'user_phone_number' => $request['phone-number'],
+            'user_address' => $request['address'],
+            'user_nik' => $request['nik'],
         ]);
-        return redirect()->intended('/login');
+        return redirect()->intended('/');
     }
 
     public function showHomeRegister()

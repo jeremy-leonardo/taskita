@@ -1,13 +1,13 @@
-@prepend('styles')
+{{-- @prepend('styles')
     <link rel="stylesheet" href="{{asset('css/layouts/_partials/register-modal.css')}}?key=<?php echo date('d-M-y'); ?>" />
-@endprepend
+@endprepend --}}
 
 {{-- REGISTER MODAL --}}
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+{{-- <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close close-custom" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -31,4 +31,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
