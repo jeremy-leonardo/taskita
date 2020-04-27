@@ -28,15 +28,10 @@ body {
   border-color: rgb(211, 65, 65) !important;
 }
 
-/* .row {
-    margin-right: 0px;
-    margin-left: 0px;
-} */
-
 .cursor-pointer {
   cursor: pointer;
 }
 
-/* .modal {
-  overflow-y:auto;
-} */
+a {
+  text-decoration: none !important;
+}
