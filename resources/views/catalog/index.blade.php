@@ -32,7 +32,7 @@
                                 </select>
                             </div>
                             <div class="col-md-1 col-sm-2 col-xs-3 pt-1 pb-1">
-                                <button type="submit" class="btn btn-primary search-btn">S</button>
+                                <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
 

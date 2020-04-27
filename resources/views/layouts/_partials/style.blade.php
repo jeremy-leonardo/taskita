@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{{asset('/bootstrap-4.4.1-dist/css/bootstrap.min.css')}}" />
 <link rel="stylesheet" href="{{asset('/bootstrap-4.4.1-dist/css/bootstrap-grid.min.css')}}" />
 <link rel="stylesheet" href="{{asset('/bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css')}}" />
+<link rel="stylesheet" href="{{asset('/fontawesome-free-5.13.0-web/css/all.min.css')}}" />
 
 <!-- Datepicker css -->
 {{-- <link rel="stylesheet" href="{{asset('/css/bootstrap-datepicker.css')}}" /> --}}
