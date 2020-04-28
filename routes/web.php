@@ -11,15 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
-Route::get('/catalog', function () {
-    return view('catalog.index');
-});
-Route::get('/catalog/detail/1', function () {
-    return view('catalog.detail');
-});
+Route::get('/', function () {return view('home.index');});
+Route::get('/catalog', 'ItemController@showAll');
+Route::get('/catalog/detail/{item_id}', 'ItemController@show');
+
 Route::get('/register', function () {
     // tambahin if auth web -> return ke home
     return view('auth.register');

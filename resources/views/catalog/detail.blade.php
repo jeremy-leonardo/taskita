@@ -74,29 +74,40 @@
 
         <div class="row">
             <div class="col-md-6 text-center">
-                <img class="item-img" src="{{asset('/image/home/red-luggage.png')}}" alt="">
+                @php
+                $imgSrc = '/image/item/' . $item->item_id . '.png';
+                @endphp
+                <img class="item-img" src="{{asset($imgSrc)}}" alt="">
             </div>
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-12 mb-4">
                         <div class="row">
-                            <div class="col-12 item-name"><b>Polo X13 Red</b></div>
+                            <div class="col-12 item-name"><b>{{$item->item_name}}</b></div>
                         </div>
                     </div>
                     <div class="col-12 mb-4">
                         <div class="row">
                             <div class="col-12 mb-1"><b>Harga:</b></div>
-                            <div class="col-12 item-price">Rp 12,000 / hari</div>
+                            <div class="col-12 item-price">Rp {{number_format($item->item_price)}} / hari</div>
                             <div class="col-12 or">atau</div>
-                            <div class="col-12 item-price">Rp 42,000 / minggu</div>
+                            <div class="col-12 item-price">Rp {{number_format($item->item_price * 4)}} / minggu</div>
                         </div>
                     </div>
                     <div class="col-12 mb-4">
                         <div class="row">
-                            <div class="col-12 mb-1"><b>Spesfikasi:</b></div>
-                            <div class="col-12">Ukuran: 20 inch</div>
-                            <div class="col-12">Berat: 700 gram</div>
-                            <div class="col-12">Warna: merah</div>
+                            <div class="col-12 mb-1"><b>Tipe:</b></div>
+                            <div class="col-12">{{$item->item_type_name}}</div>
+                            <div class="col-12 mb-1"><b>Brand:</b></div>
+                            <div class="col-12">{{$item->brand_name}}</div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="row">
+                            <div class="col-12 mb-1"><b>Deskripsi:</b></div>
+                            <div class="col-12">{{$item->item_description}}</div>
+                            {{-- <div class="col-12">Berat: 700 gram</div> --}}
+                            {{-- <div class="col-12">Warna: merah</div> --}}
                         </div>
                     </div>
                     <div class="col-12">
