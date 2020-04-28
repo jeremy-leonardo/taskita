@@ -15,23 +15,30 @@
         <div class="row">
             <div class="col-12">
                 <div class="search-nav pt-1 pb-1">
-                    <form action="" method="get">
+                    <form action="/catalog/search" method="get">
                         <div class="row">
                             <div class="col-md-7 col-12  pt-1 pb-1">
-                                <input type="text" name="" id="" class="form-control"
-                                    placeholder="Cari tas yang Anda inginkan" aria-describedby="helpId">
+                                <input type="text" name="item_name" id="" class="form-control"
+                                    placeholder="Cari tas yang Anda inginkan" @isset($search_key) value="{{$search_key->item_name ?? ''}}" @endisset>
                             </div>
                             <div class="col-md-4 col-sm-10 col-xs-9 pt-1 pb-1">
-                                <select class="form-control" name="" id="">
-                                    <option>Semua</option>
-                                    <option>Koper</option>
-                                    <option>Backpack</option>
-                                    <option>Tas Wanita</option>
+                                @php
+                                $item_types = DB::table('item_type')->where('item_type_id', '!=', 1)->get();
+                                @endphp
+                                <select class="form-control" name="item_type_id" id="">
+                                    <option value="-99">Semua</option>
+                                    @foreach($item_types as $item_type)
+                                    <option value="{{$item_type->item_type_id}}" @if( ($search_key ?? false) && $item_type->item_type_id ==
+                                        $search_key->item_type_id ?? '-99') selected @endif>
+                                        {{$item_type->item_type_name}}
+                                    </option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-md-1 col-sm-2 col-xs-3 pt-1 pb-1">
-                                <button type="submit" class="btn btn-primary search-btn"><i
-                                        class="fas fa-search"></i></button>
+                                <button type="submit" class="btn btn-primary search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </div>
                         </div>
 
@@ -51,8 +58,7 @@
                                     @php
                                     $imgSrc = '/image/item/' . $item->item_id . '.png';
                                     @endphp
-                                    <img class="item-img" src="{{asset($imgSrc)}}"
-                                        alt="item image">
+                                    <img class="item-img" src="{{asset($imgSrc)}}" alt="item image">
                                 </div>
                             </div>
                             <div class="col-12 mt-3 mb-3">

@@ -14,6 +14,7 @@
 Route::get('/', function () {return view('home.index');});
 Route::get('/catalog', 'ItemController@showAll');
 Route::get('/catalog/detail/{item_id}', 'ItemController@show');
+Route::get('/catalog/search', 'ItemController@search');
 
 Route::get('/register', function () {
     // tambahin if auth web -> return ke home
