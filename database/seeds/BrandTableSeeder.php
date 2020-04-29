@@ -19,10 +19,19 @@ class BrandTableSeeder extends Seeder
             'brand_name' => 'Polo'
             ],
             [
-            'brand_name' => 'Samsonite'
+            'brand_name' => 'Louis Vuitton'
             ],
             [
-            'brand_name' => 'Tourister'
+            'brand_name' => 'Gucci'
+            ],
+            [
+            'brand_name' => 'Guess'
+            ],
+            [
+            'brand_name' => 'Calvin Klein'
+            ],
+            [
+            'brand_name' => 'Lacoste'
             ],
             [
             'brand_name' => 'TUMI'
@@ -31,7 +40,7 @@ class BrandTableSeeder extends Seeder
             'brand_name' => 'Gearbag'
             ],
             [
-            'brand_name' => 'Neosack'
+            'brand_name' => 'Kenzo'
             ],
             [
             'brand_name' => 'Bonjour'
