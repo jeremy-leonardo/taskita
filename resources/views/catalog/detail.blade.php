@@ -113,7 +113,13 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Sewa</button>
+                                <button type="submit" class="btn btn-primary"
+                                @if(Auth::guard('web')->check())
+                                {{-- open modal transaction --}}
+                                @else
+                                data-toggle="modal" data-target="#loginModal"
+                                @endif
+                                >Sewa</button>
                             </div>
                         </div>
                     </div>

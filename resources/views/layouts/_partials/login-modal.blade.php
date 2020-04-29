@@ -46,7 +46,7 @@
     </div>
 </div>
 
-{{-- @if($errors->any())
+@if($errors->any() && $errors->all()[0] == "Failed to log in")
 @push('inline-scripts')
 <script>
 $(document).ready(function() {
@@ -54,4 +54,4 @@ $(document).ready(function() {
 });
 </script>
 @endpush
-@endif --}}
+@endif

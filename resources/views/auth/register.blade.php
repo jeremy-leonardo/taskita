@@ -42,7 +42,7 @@
                 <label class="input-label" for="NIK">NIK (Nomor KTP)</label>
                 <input name="nik" type="text" id="nik" placeholder="NIK" class="form-control">
                 <br>
-                @if($errors->any())
+                @if($errors->any() && $errors->all()[0] != "Failed to log in")
                 <div class="alert alert-danger alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     @foreach($errors->all() as $error)
