@@ -45,17 +45,17 @@ class ItemController extends BaseController
 
         $search_key = $request;
 
-        $items = DB::table('item')
-            ->join('item_type', 'item_type.item_type_id', '=', 'item.item_type_id')
-            ->join('brand', 'brand.brand_id', '=', 'item.brand_id');
+        $items = DB::table('item');
 
-        if($search_key->item_name && $search_key->item_name != '')
-        $items = $items->where('item_name', 'like', "%" . $search_key->item_name . "%");
-        
-        if($search_key->item_type_id != -99)
-        $items = $items->where('item.item_type_id', '=', $search_key->item_type_id);
-            
-        $items = $items->get();
+        if ($search_key->item_name && $search_key->item_name != '')
+            $items = $items->where('item_name', 'like', "%" . $search_key->item_name . "%");
+
+        $items = $items->join('item_type', 'item_type.item_type_id', '=', 'item.item_type_id');
+
+        if ($search_key->item_type_id != -99)
+            $items = $items->where('item.item_type_id', '=', $search_key->item_type_id);
+
+        $items = $items->join('brand', 'brand.brand_id', '=', 'item.brand_id')->get();
         // ->paginate(); //gausah pke get() klo uda paginate()
 
         return view('catalog.index', ['items' => $items, 'search_key' => $search_key]);
