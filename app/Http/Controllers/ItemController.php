@@ -65,9 +65,9 @@ class ItemController extends BaseController
     {
 
         $item = DB::table('item')
+            ->where('item_id', $item_id)
             ->join('item_type', 'item_type.item_type_id', '=', 'item.item_type_id')
             ->join('brand', 'brand.brand_id', '=', 'item.brand_id')
-            ->where('item_id', $item_id)
             ->get()->first();
 
         return view('catalog.detail', ['item' => $item]);
