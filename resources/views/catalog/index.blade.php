@@ -50,7 +50,7 @@
         <div class="row">
             @foreach($items as $item)
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <a class="deco-none" href="/catalog/detail/1">
+                <a class="deco-none" href="/catalog/detail/{{$item->item_id}}">
                     <div class="item-box">
                         <div class="row">
                             <div class="col-12 text-center">
