@@ -17,6 +17,7 @@
 
 .action-btn {
     margin-top: 60px;
+    min-width: 150px;
     width: 30%;
 }
 

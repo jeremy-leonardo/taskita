@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @prepend('styles')
-<link rel="stylesheet" href="{{asset('css/home/index.css')}}?key=<?php echo date('d-M-y'); ?>" />
 <link rel="stylesheet" href="{{asset('css/auth/register.css')}}?key=<?php echo date('d-M-y'); ?>" />
 @endprepend
 
