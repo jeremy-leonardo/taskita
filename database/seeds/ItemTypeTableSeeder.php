@@ -24,6 +24,9 @@ class ItemTypeTableSeeder extends Seeder
             [
             'item_type_name' => 'Tas Wanita'
             ],
+            [
+            'item_type_name' => 'Sling Bag'    
+            ]
         ]);
     }
 }

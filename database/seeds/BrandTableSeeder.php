@@ -60,6 +60,12 @@ class BrandTableSeeder extends Seeder
             [
             'brand_name' => 'Prada'
             ],
+            [
+            'brand_name' => 'OFF-WHITE'
+            ],
+            [
+            'brand_name' => 'Jansport'    
+            ]
         ]);
     }
 }
