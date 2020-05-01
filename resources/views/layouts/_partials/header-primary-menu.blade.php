@@ -59,9 +59,3 @@
 
 @include('layouts._partials.login-modal')
 {{-- @include('layouts._partials.register-modal') --}}
-
-@prepend('inline-scripts')
-<script>
-
-</script>
-@endprepend
