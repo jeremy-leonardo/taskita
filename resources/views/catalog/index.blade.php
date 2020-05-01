@@ -36,8 +36,8 @@
                                 </select>
                             </div>
                             <div class="col-md-1 col-sm-2 col-xs-3 pt-1 pb-1">
-                                <button type="submit" class="btn btn-primary search-btn">
-                                    <i class="fas fa-search"></i>
+                                <button type="submit" class="btn btn-primary search-btn text-center">
+                                    <i class="fas fa-search"></i><span class="d-sm-none">&nbsp;&nbsp;Cari</span>
                                 </button>
                             </div>
                         </div>
