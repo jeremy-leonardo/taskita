@@ -19,6 +19,11 @@
                 <a class="nav-link deco-none fcolor-white mr-3 nav-menu" href="/catalog">CATALOG</a>
             </li>
             @if(Auth::guard('web')->check())
+            <li class="nav-item">
+                <a class="nav-link deco-none fcolor-white mr-3 nav-menu" href="/order">MY ORDERS</a>
+            </li>
+            @endif
+            @if(Auth::guard('web')->check())
             <li class="nav-item dropdown d-lg-none">
                 <a class="nav-link dropdown-toggle nav-menu fcolor-white" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

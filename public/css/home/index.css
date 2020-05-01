@@ -1,5 +1,6 @@
-.pink-bg {
+.section1-bg {
     background: linear-gradient(90deg, #0D17F3 0%, #0066FF 100%);
+    padding-bottom: 30px;
 }
 
 .main-text {

@@ -21,6 +21,8 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+Route::get('/order', 'TransactionController@showAllByCurrentUser');
+
 Route::post('/login', 'Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/register', 'Auth\RegisterController@create');
