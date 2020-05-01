@@ -84,6 +84,30 @@ class ItemTableSeeder extends Seeder
                 'item_price' => 160000,
                 'item_description' => 'Ransel berukuran 14,8 inci dengan dimensi 30x12x41cm dengan bobot 560 gram'
             ],
+            [
+                'item_type_id' => 2,
+                'brand_id' => 17,
+                'item_name' => 'OFF-WHITE Transparent Luggage',
+                'item_stock' => 2,
+                'item_price' => 450000,
+                'item_description' => 'Koper OFF-WHITE dengan tinggi 55 cm, lebar 39 cm dan kedalaman 23 cm dengan bahan polycarbonate premium'
+            ],
+            [
+                'item_type_id' => 5,
+                'brand_id' => 10,
+                'item_name' => 'Kenzo Sling Bag "Crew"',
+                'item_stock' => 3,
+                'item_price' => 280000,
+                'item_description' => 'tas sling bag nyaman dari Kenzo yang memiliki baan 100% kulit asli'
+            ],
+            [
+                'item_type_id' => 4,
+                'brand_id' => 3,
+                'item_name' => 'Luis Vuitton Lockme Red Calfskin Shoulder Bag',
+                'item_stock' => 2,
+                'item_price' => 570000,
+                'item_description' => 'Tas Luis Vuitton dengan ukuran 8,5 inci dengan bahan kulit premmium'
+            ]
         ]);
     }
 }
