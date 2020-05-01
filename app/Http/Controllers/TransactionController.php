@@ -42,6 +42,15 @@ class TransactionController extends BaseController
             ->join('payment_type', 'payment_type.payment_type_id', '=', 'payment.payment_type_id')
             ->get();
 
+        foreach ($transactions as $transaction) {
+            $weekly_price = $transaction->item_price * 4;
+            $delivery_cost = 10000;
+            $weekly_charge = floor($transaction->rent_duration / 4) * $weekly_price;
+            $daily_charge = $transaction->item_price * ($transaction->rent_duration % 4);
+            $transaction->item_charge = $weekly_charge + $daily_charge;
+            $transaction->total_charge = $weekly_charge + $daily_charge + $delivery_cost;
+        }
+
         return view('order.index', ['transactions' => $transactions]);
     }
 }

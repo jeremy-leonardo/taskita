@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="mb-2">
                                     <b>
-                                        Rp {{number_format($transaction->item_price * $transaction->rent_duration + 12000)}}
+                                        Rp {{number_format($transaction->total_charge)}}
                                     </b>
                                 </div class="mb-2">
                                 <div>Untuk {{$transaction->rent_duration}} hari</div>
