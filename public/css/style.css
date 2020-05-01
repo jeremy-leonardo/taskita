@@ -17,15 +17,25 @@ body {
 }
 
 .btn-primary {
-  background: #b32828 !important;
-  border-color: #b32828 !important;
+  background: #ff6b00 !important;
+  border-color: #ff6b00 !important;
+  font-weight: medium;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:after,
 .btn-primary:active:after {
-  background: rgb(211, 65, 65) !important;
-  border-color: rgb(211, 65, 65) !important;
+  background: rgb(255, 126, 34) !important;
+  border-color: rgb(255, 126, 34) !important;
 }
 
 .cursor-pointer {

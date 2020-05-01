@@ -23,7 +23,7 @@
             </div>
             <div class="col-xl-6 col-lg-7 text-right">
                 <img src="{{asset('/image/home/red-luggage.png')}}" class="luggage" alt="">
-                <img src="{{asset('/image/home/red-backpack.png')}}" class="backpack" alt="">
+                <img src="{{asset('/image/home/handbag.png')}}" class="backpack" alt="">
             </div>
         </div>
 
