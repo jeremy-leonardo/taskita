@@ -44,11 +44,18 @@ class ItemController extends BaseController
     {
 
         $search_key = $request;
+        $db_config = (object) DB::connection()->getConfig();
+        $db_type = $db_config->driver;
 
         $items = DB::table('item');
 
-        if ($search_key->item_name && $search_key->item_name != '')
-            $items = $items->where('item_name', 'like', "%" . $search_key->item_name . "%");
+        if ($search_key->item_name && $search_key->item_name != ''){
+            if($db_type == 'pgsql'){
+                $items = $items->where('item_name', 'ilike', "%" . $search_key->item_name . "%");
+            }else{
+                $items = $items->where('item_name', 'like', "%" . $search_key->item_name . "%");
+            }
+        }
 
         $items = $items->join('item_type', 'item_type.item_type_id', '=', 'item.item_type_id');
 
