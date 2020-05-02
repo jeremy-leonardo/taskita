@@ -22,6 +22,8 @@ class CreatePaymentTable extends Migration
             $table->string('payment_ref')->default('');
             $table->timestamps();
             
+            $table->foreign('transaction_id')->references('transaction_id')->on('transaction')->onDelete('cascade');
+            $table->foreign('payment_type_id')->references('payment_type_id')->on('payment_type')->onDelete('cascade');
         });
     }
 

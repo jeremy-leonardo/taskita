@@ -24,6 +24,8 @@ class CreateItemTable extends Migration
             $table->bigInteger('item_price');
             $table->timestamps();
             
+            $table->foreign('item_type_id')->references('item_type_id')->on('item_type')->onDelete('cascade');
+            $table->foreign('brand_id')->references('brand_id')->on('brand')->onDelete('cascade');
         });
     }
 
