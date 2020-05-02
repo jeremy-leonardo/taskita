@@ -7,7 +7,6 @@
 @section('content')
 
 @include('layouts._partials.header-primary-menu')
-@include('catalog.partials.rent-modal')
 
 
 <div class="row">
@@ -54,13 +53,15 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary"
                                 @if(Auth::guard('web')->check())
-                                data-toggle="modal" data-toggle="#rentModal"
-                                @else
-                                data-toggle="modal" data-target="#loginModal"
-                                @endif
+                                <button class="btn btn-primary"
+                                data-toggle="modal" data-target="#rentModal"
                                 >Sewa</button>
+                                @else
+                                <button class="btn btn-primary"
+                                data-toggle="modal" data-target="#loginModal"
+                                >Sewa</button>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -71,6 +72,7 @@
     </div>
 </div>
 
+@include('catalog._partials.rent-modal')
 
 @endsection
 
