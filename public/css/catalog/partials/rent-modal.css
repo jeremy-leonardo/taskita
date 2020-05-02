@@ -1,0 +1,49 @@
+/* HEADER - LOGIN */
+
+.modal-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.close-custom {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.action-btn {
+    margin-top: 60px;
+    min-width: 150px;
+    width: 30%;
+}
+
+.foot-text {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 6px;
+}
+
+.foot-action-text {
+    font-weight: bold;
+    font-size: 16px;
+    color: #1bb9f2 !important;
+}
+
+.input-label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.foot-red{
+    font-size: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}

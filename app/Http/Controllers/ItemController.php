@@ -79,4 +79,6 @@ class ItemController extends BaseController
 
         return view('catalog.detail', ['item' => $item]);
     }
+
+   
 }

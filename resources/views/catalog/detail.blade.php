@@ -7,6 +7,7 @@
 @section('content')
 
 @include('layouts._partials.header-primary-menu')
+@include('catalog.partials.rent-modal')
 
 
 <div class="row">
@@ -55,7 +56,7 @@
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary"
                                 @if(Auth::guard('web')->check())
-                                {{-- open modal transaction --}}
+                                data-toggle="modal" data-toggle="#rentModal"
                                 @else
                                 data-toggle="modal" data-target="#loginModal"
                                 @endif
