@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Auth;
-use App\Item;
+use App\Transaction;
 
 class TransactionController extends BaseController
 {
@@ -31,7 +31,7 @@ class TransactionController extends BaseController
 
     public function showAllByCurrentUser()
     {
-        if(!Auth::guard('web')->check()){
+        if (!Auth::guard('web')->check()) {
             return redirect()->intended('/');
         }
 
@@ -52,5 +52,31 @@ class TransactionController extends BaseController
         }
 
         return view('order.index', ['transactions' => $transactions]);
+    }
+
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'duration' => ['required', 'numeric'],
+            'arrive-date' => ['required'],
+            'item' => ['required', 'numeric']
+        ]);
+    }
+
+    protected function create(Request $request)
+    {
+        $item = DB::table('item')->where('item_id', $request['item']);
+        if ($item->get()->first()->item_stock > 0) {
+            $this->validator($request->all())->validate();
+            $user = Transaction::create([
+                'item_id' => $request['item'],
+                'user_id' => Auth::guard('web')->user()->user_id,
+                'status_id' => 1,
+                'transaction_arrive_date' => $request['arrive-date'],
+                'transaction_rent_duration' => $request['duration']
+            ]);
+            $item->decrement('item_stock', 1);
+            return redirect()->intended('/order');
+        }
     }
 }

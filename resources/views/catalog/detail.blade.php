@@ -37,7 +37,7 @@
                     <div class="col-12 mb-4">
                         <div class="row">
                             <div class="col-12 mb-1"><b>Tipe:</b></div>
-                            <div class="col-12">{{$item->item_type_name}}</div>
+                            <div class="col-12 mb-3">{{$item->item_type_name}}</div>
                             <div class="col-12 mb-1"><b>Brand:</b></div>
                             <div class="col-12">{{$item->brand_name}}</div>
                         </div>

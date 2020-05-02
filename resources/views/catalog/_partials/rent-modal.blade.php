@@ -12,7 +12,8 @@
             </div>
             <div class="modal-body">
                 <h2 class="modal-title"><b>Sewa</b></h2>
-                <form method="" action="">
+                <form method="POST" action="/rent">
+                    {{ csrf_field() }}
                     <label class="input-label" for="duration">Durasi</label>
                     <select class="form-control" name="duration" id="durationSelection">
                         <option value="2">2 Hari</option>
@@ -24,12 +25,15 @@
                     <label class="input-label" for="arriveDate">Tanggal Terima Tas</label>
                     <br>
                     <input class="form-control" name="arrive-date" type="date" id="arriveDate" value="2020-05-25">
-                    <small id="helpArriveDate" class="form-text text-muted">Tanggal dalam format dd-MMM-yyyy (cth: 01-Jan-2020)</small>
+                    <small id="helpArriveDate" class="form-text text-muted">Tanggal dalam format dd-MMM-yyyy (cth:
+                        01-Jan-2020)</small>
                     <br>
                     <span>Total Harga:</span>
                     <div id="total"></div>
-
                     <p class="foot-red">*Total harga sudah termasuk ongkos kirim</p>
+
+                    <input type="number" class="form-control" name="item" value="{{$item->item_id}}" hidden>
+
                     <div class="col-12 text-center">
                         <button type="submit" class="btn btn-primary action-btn" id="rentBtn">Sewa</button>
                     </div>
@@ -41,7 +45,6 @@
 
 @prepend('inline-scripts')
 <script>
-
     var formatter = new Intl.NumberFormat('en-US');
     $(document).ready(function(){
 
