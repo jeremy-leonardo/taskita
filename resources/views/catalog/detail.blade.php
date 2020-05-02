@@ -53,18 +53,31 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-12">
-                                @if(Auth::guard('web')->check())
                                 <button class="btn btn-primary"
+                                @if(Auth::guard('web')->check() && $item->item_stock > 0)
                                 data-toggle="modal" data-target="#rentModal"
-                                >Sewa</button>
-                                @else
-                                <button class="btn btn-primary"
+                                @elseif($item->item_stock > 0)
                                 data-toggle="modal" data-target="#loginModal"
-                                >Sewa</button>
+                                @else
+                                hidden="true" disabled
                                 @endif
+                                >Sewa</button>
                             </div>
                         </div>
                     </div>
+                    @if($item->item_stock <= 0)
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>
+                                    <strong>
+                                        Item out of Stock
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>

@@ -37,6 +37,10 @@ body {
   background: rgb(255, 126, 34) !important;
   border-color: rgb(255, 126, 34) !important;
 }
+.btn-primary:disabled {
+  background: rgb(143, 127, 116) !important;
+  border-color: rgb(143, 127, 116) !important;
+}
 
 .cursor-pointer {
   cursor: pointer;
