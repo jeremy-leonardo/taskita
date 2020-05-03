@@ -21,12 +21,12 @@
                     </h1>
                 </div>
                 <div class="col-12">
-                    @foreach($transactions as $transactions)
+                    @foreach($transactions as $transaction)
                     <div class="order-card">
                         <div class="row">
                             <div class="col-lg-2 col-md-4">
                                 <div class="img-box text-center">
-                                    <img class="item-img" src="{{asset('image/item/1.png')}}" alt="item image">
+                                    <img class="item-img" src="{{asset('image/item/'.$transaction->item_id.'.png')}}" alt="item image">
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-4">
@@ -38,22 +38,32 @@
                                 </div>
                                 <div class="status-description mb-2">
                                     Kembalikan pada
-                                    {{$transaction->arrive_date->modify('+'. $transaction->rent_duration .' day')}}
+                                    {{date ( 'Y-m-d', strtotime($transaction->transaction_arrive_date. '+ '. $transaction->transaction_rent_duration .' days'))}}
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-4">
                                 <div class="text-right order-date d-none d-md-block">
                                     {{$transaction->created_at}}
                                 </div>
-                                <div class="mb-2">
-                                    Pembayaran via {{$transaction->payment_type_name}}
+                                <div class="mb-2 mt-2">
+                                    @if($transaction->payment_id)
+                                    Pembayaran via {{$transaction->payment_type_name}}                                   
+                                    @endif
                                 </div>
                                 <div class="mb-2">
                                     <b>
                                         Rp {{number_format($transaction->total_charge)}}
                                     </b>
                                 </div class="mb-2">
-                                <div>Untuk {{$transaction->rent_duration}} hari</div>
+                                <div>Untuk {{$transaction->transaction_rent_duration}} hari</div>
+                                <div class="mb-2 mt-4">
+                                    <button class="btn btn-primary pay-button">Pay</button>
+                                    {{-- open modal --}}
+                                    {{-- <form method="POST" action="/pay">
+                                        {{ csrf_field() }}
+                                        <button type="submit" class="btn btn-primary">Pay now</button>
+                                    </form> --}}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -22,7 +22,7 @@ class TransactionController extends BaseController
      * @return \Illuminate\Http\Response
      */
     protected $redirectTo = '/';
-    protected $module = 'item';
+    protected $module = 'transaction';
 
 
     public function __construct()
@@ -38,18 +38,21 @@ class TransactionController extends BaseController
         $transactions = DB::table('transaction')
             ->where('user_id', Auth::guard('web')->user()->user_id)
             ->join('item', 'item.item_id', '=', 'transaction.item_id')
-            ->join('payment', 'payment.transaction_id', '=', 'transaction.transaction_id')
-            ->join('payment_type', 'payment_type.payment_type_id', '=', 'payment.payment_type_id')
+            ->join('status', 'status.status_id', '=', 'transaction.status_id')
+            ->leftJoin('payment', 'payment.transaction_id', '=', 'transaction.transaction_id')
+            ->leftJoin('payment_type', 'payment_type.payment_type_id', '=', 'payment.payment_type_id')
             ->get();
 
         foreach ($transactions as $transaction) {
             $weekly_price = $transaction->item_price * 4;
             $delivery_cost = 10000;
-            $weekly_charge = floor($transaction->rent_duration / 4) * $weekly_price;
-            $daily_charge = $transaction->item_price * ($transaction->rent_duration % 4);
+            $weekly_charge = floor($transaction->transaction_rent_duration / 4) * $weekly_price;
+            $daily_charge = $transaction->item_price * ($transaction->transaction_rent_duration % 4);
             $transaction->item_charge = $weekly_charge + $daily_charge;
             $transaction->total_charge = $weekly_charge + $daily_charge + $delivery_cost;
         }
+
+        // dd($transactions);
 
         return view('order.index', ['transactions' => $transactions]);
     }
@@ -68,14 +71,14 @@ class TransactionController extends BaseController
         $item = DB::table('item')->where('item_id', $request['item']);
         if ($item->get()->first()->item_stock > 0) {
             $this->validator($request->all())->validate();
-            $user = Transaction::create([
+            $transaction = Transaction::create([
                 'item_id' => $request['item'],
                 'user_id' => Auth::guard('web')->user()->user_id,
                 'status_id' => 1,
                 'transaction_arrive_date' => $request['arrive-date'],
                 'transaction_rent_duration' => $request['duration']
             ]);
-            $item->decrement('item_stock', 1);
+            // $item->decrement('item_stock', 1);
             return redirect()->intended('/order');
         }
     }
