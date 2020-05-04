@@ -71,9 +71,9 @@ class ItemTableSeeder extends Seeder
             [
                 'item_type_id' => 3,
                 'brand_id' => 7,
-                'item_name' => 'Lacoste NEOCROC BACKPACK Black',
+                'item_name' => 'Versace Jeans Couture Backpack Black',
                 'item_stock' => 3,
-                'item_price' => 70000,
+                'item_price' => 130000,
                 'item_description' => 'Ransel berukuran 18,7 inci dengan dimensi 27x15x39cm dengan bobot 640 gram'
             ],
             [
