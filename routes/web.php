@@ -27,3 +27,4 @@ Route::post('/login', 'Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::post('/register', 'Auth\RegisterController@create');
 Route::post('/rent', 'TransactionController@create');
+Route::post('/pay', 'PaymentController@create');

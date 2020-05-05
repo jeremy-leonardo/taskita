@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Validator;
 use Auth;
 use App\Payment;
 
-class TransactionController extends BaseController
+class PaymentController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
@@ -39,16 +39,19 @@ class TransactionController extends BaseController
 
     protected function create(Request $request)
     {
+        $transaction = DB::table('transaction')->where('transaction_id', $request['transaction']);
         $item = DB::table('item')->where('item_id', $request['item']);
         if ($item->get()->first()->item_stock > 0) {
             $this->validator($request->all())->validate();
             $payment = Payment::create([
-                'transaction_id' => $request['tranasction'],
+                'transaction_id' => $request['transaction'],
                 'payment_type_id' => $request['payment-type'],
                 'payment_timestamp' => date('Y-m-d H:i:s')
             ]);
+            $payment->save();
             $item->decrement('item_stock', 1);
-            return back();
+            $transaction->update(['status_id' => 2]);
         }
+        return back();
     }
 }

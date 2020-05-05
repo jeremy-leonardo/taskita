@@ -13,6 +13,9 @@ class StatusTableSeeder extends Seeder
     {
         DB::table('status')->insert([
             [
+            'status_name' => 'Pending'
+            ],
+            [
             'status_name' => 'In Delivery'
             ],
             [

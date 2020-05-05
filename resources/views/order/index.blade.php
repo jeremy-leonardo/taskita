@@ -56,14 +56,11 @@
                                     </b>
                                 </div class="mb-2">
                                 <div>Untuk {{$transaction->transaction_rent_duration}} hari</div>
+                                @if(!$transaction->payment_id)
                                 <div class="mb-2 mt-4">
-                                    <button class="btn btn-primary pay-button">Pay</button>
-                                    {{-- open modal --}}
-                                    {{-- <form method="POST" action="/pay">
-                                        {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-primary">Pay now</button>
-                                    </form> --}}
+                                    <button class="btn btn-primary pay-button" onclick="changeSelectedTransaction('{{$transaction->transaction_id}}', '{{$transaction->item_id}}')" data-toggle="modal" data-target="#paymentModal">Bayar</button>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -81,5 +78,17 @@
     </div>
 </div>
 
+@include('payment._partials.payment-modal')
 
 @endsection
+
+@push('inline-scripts')
+
+<script>
+    function changeSelectedTransaction(transactionID, itemID){
+        $("#selectedTransaction").val(transactionID);
+        $("#selectedItem").val(itemID);
+    }
+</script>
+
+@endpush

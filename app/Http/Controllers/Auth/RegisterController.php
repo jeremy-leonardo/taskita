@@ -78,6 +78,7 @@ class RegisterController extends Controller
             'user_address' => $request['address'],
             'user_nik' => $request['nik'],
         ]);
+        $user->save();
         return redirect()->intended('/');
     }
 

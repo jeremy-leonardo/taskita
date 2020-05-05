@@ -41,6 +41,7 @@ class TransactionController extends BaseController
             ->join('status', 'status.status_id', '=', 'transaction.status_id')
             ->leftJoin('payment', 'payment.transaction_id', '=', 'transaction.transaction_id')
             ->leftJoin('payment_type', 'payment_type.payment_type_id', '=', 'payment.payment_type_id')
+            ->select('transaction.transaction_id', 'item.item_id', 'transaction.user_id', 'transaction.transaction_arrive_date', 'transaction.transaction_rent_duration', 'transaction.created_at', 'transaction.updated_at', 'item.item_type_id', 'item.brand_id', 'item.item_name', 'item.item_price', 'status.status_name', 'payment.payment_id', 'payment_type.payment_type_id', 'payment_type.payment_type_name')
             ->get();
 
         foreach ($transactions as $transaction) {
@@ -78,6 +79,7 @@ class TransactionController extends BaseController
                 'transaction_arrive_date' => $request['arrive-date'],
                 'transaction_rent_duration' => $request['duration']
             ]);
+            $transaction->save();
             // $item->decrement('item_stock', 1);
             return redirect()->intended('/order');
         }

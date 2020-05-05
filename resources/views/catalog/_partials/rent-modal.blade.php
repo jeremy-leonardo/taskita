@@ -43,7 +43,7 @@
     </div>
 </div>
 
-@prepend('inline-scripts')
+@push('inline-scripts')
 <script>
     var formatter = new Intl.NumberFormat('en-US');
     $(document).ready(function(){
@@ -84,4 +84,4 @@
 
 
 </script>
-@endprepend
+@endpush
