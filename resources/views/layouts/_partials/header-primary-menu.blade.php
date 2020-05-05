@@ -62,5 +62,5 @@
     @endif
 </nav>
 
-@include('layouts._partials.login-modal')
-{{-- @include('layouts._partials.register-modal') --}}
+@include('auth._partials.login-modal')
+{{-- @include('auth._partials.register-modal') --}}
