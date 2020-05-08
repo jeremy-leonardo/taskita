@@ -5,7 +5,7 @@
 <footer class="">
     <div class="row">
         <div class="col-12 text-center mt-5 mb-5">
-            © 2020 PT Milik Kita Semua Bersama Bahagia
+            © LB01 Software Engineering Group<br>2201731106 - 2201728490 - 2201731756 - 2201760970 - 2201762995 - 2201769635 
         </div>
     </div>
 </footer>
