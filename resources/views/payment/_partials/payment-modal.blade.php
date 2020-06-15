@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{asset('css/payment/_partials/payment-modal.css')}}?key=<?php echo date('d-M-y'); ?>" />
 @endprepend
 
-{{-- LOGIN MODAL --}}
+{{-- PAYMENT MODAL --}}
 <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -16,14 +16,14 @@
                 <!-- PAYMENT FORM -->
                 <form method="POST" action="/pay">
                     {{ csrf_field() }}                    
-                    <label class="input-label" for="price">Harga</label>
+                    {{-- <label class="input-label" for="price">Harga</label>
                     <div>
                         Rp ...
                     </div>
                     <div>
                         *Total harga sudah termasuk ongkos kirim
                     </div>
-                    <br>
+                    <br> --}}
                     <label class="input-label" for="payment-type">Metode Pembayaran</label>
                     @php
                     $payment_types = DB::table('payment_type')->get();
