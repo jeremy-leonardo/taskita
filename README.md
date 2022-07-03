@@ -10,6 +10,14 @@ The website used Laravel, Bootstrap, jQuery, MySQL for development, and PostgreS
 
 We used Figma to design our website. Our first design looks very bad. But after several sprints, we made several changes to make it look better. We also learned that color is important in design, although we are not an artist, we did our best.
 
+## Screenshots
+
+![home](.screenshots/home.png?raw=true "home")<br>
+![catalog](.screenshots/catalog.png?raw=true "catalog")<br>
+![catalog-detail.png](.screenshots/catalog-detail.png?raw=true "catalog-detail.png")<br>
+![rent](.screenshots/rent.png?raw=true "rent")<br>
+![my-orders](.screenshots/my-orders.png?raw=true "my-orders")<br>
+
 ## Code Contributors
 
 - Main contributor : Jeremy Leonardo (LB01)
